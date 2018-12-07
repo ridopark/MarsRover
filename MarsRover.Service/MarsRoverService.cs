@@ -149,7 +149,7 @@ namespace MarsRover.Service
 
             System.IO.Directory.CreateDirectory(downloadBasePath);
             using (var fileStream = new FileStream($@"{downloadBasePath}/{photoFilename}", FileMode.Create, FileAccess.Write, FileShare.None)) {
-                await response.Content.CopyToAsync(fileStream);
+                await response.Content.CopyToAsync(fileStream); 
             }
         }
 
