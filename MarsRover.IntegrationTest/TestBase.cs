@@ -31,7 +31,8 @@ namespace MarsRover.IntegrationTest
 
             var configuration = _serviceProvider.GetService<IConfiguration>();
             var downloadBasePath = configuration.GetValue<string>("MarsRover:DownloadBasePath");
-            System.IO.Directory.Delete(downloadBasePath, true);
+            if (System.IO.Directory.Exists(downloadBasePath)) 
+                System.IO.Directory.Delete(downloadBasePath, true);
         }
 
         public void Dispose()
