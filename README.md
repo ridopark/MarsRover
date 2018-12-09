@@ -33,12 +33,6 @@ MarsRover.Web
   		- restores all node packages
     2. ~\MarsRover-master\MarsRover.Web\dotnet build    
     3. ~\MarsRover-master\MarsRover.Web\dotnet run
-    4. When Angular Live Dev Server starts, use the url to open you browser on the address. It will display message as shown below.
-    	- ** Angular Live Development Server is listening on localhost:1982, open your browser on http://localhost:1982/ **
+    4. When Angular Live Dev Server starts, use the url displayed as below to open you browser on the address. It takes a few seconds for the dev server to start.
+    	** Angular Live Development Server is listening on localhost:1982, open your browser on http://localhost:1982/ **
 
-C:\Users\rpark_admin\source\repos\MarsRover\MarsRover.Web>
-To run 
-npm install npm-install-peers
-dotnet run --server.urls https://localhost --port 5050
-
-https://localhost:5050/api/marsrover/rovers
