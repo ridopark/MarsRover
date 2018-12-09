@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using MarsRover.Core;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace MarsRover.Web
+namespace MarsRover.WebApi
 {
     public class Startup
     {
@@ -27,10 +27,17 @@ namespace MarsRover.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddSpaStaticFiles(configuration => 
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);            
+            services.Scan(x =>
             {
-                configuration.RootPath = "ClientApp/dist";
+                var entryAssembly = Assembly.GetEntryAssembly();
+                var referencedAssemblies = entryAssembly.GetReferencedAssemblies().Select(Assembly.Load);
+                var assemblies = new List<Assembly> { entryAssembly }.Concat(referencedAssemblies);
+
+                x.FromAssemblies(assemblies)
+                .AddClasses(classes => classes.AssignableTo(typeof(ISingletonDependency)))
+                .AsImplementedInterfaces()
+                .WithScopedLifetime();
             });
         }
 
@@ -47,19 +54,12 @@ namespace MarsRover.Web
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
-            app.UseSpaStaticFiles();
-            app.UseHttpsRedirection();
+            app.UseCors(builder =>
+                builder.WithOrigins("http://localhost:4200", "http://www.myclientserver.com")
+                    .AllowAnyOrigin()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod());
             app.UseMvc();
-            app.UseSpa(spa =>
-            {
-                spa.Options.SourcePath = "ClientApp";
-                if (env.IsDevelopment())
-                {
-                    spa.UseAngularCliServer(npmScript: "start");
-                }
-            });
-
         }
     }
 }

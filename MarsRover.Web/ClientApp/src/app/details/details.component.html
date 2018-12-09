@@ -1,0 +1,13 @@
+<h1>Rover - {{ rover$.name }}</h1>
+
+<ul>
+  <li>Landing Date: {{rover$.landing_date | date:"MM/dd/yy"}}</li>
+  <li>Launch Date: {{rover$.launch_date | date:"MM/dd/yy"}}</li>
+  <li>Status: {{rover$.status}}</li>
+  <li>Max Sol: {{rover$.max_sol}}</li>
+  <li>Max Date: {{rover$.max_date | date:"MM/dd/yy"}}</li>
+  <li>
+    Total Photos: <a routerLink="/pictures/rover/{{rover$.id}}" title="Click to see pictures">{{rover$.total_photos}}</a>
+  </li>
+  <li>Cameras: {{getCameraList(rover$.cameras)}}</li>
+</ul>

@@ -1,0 +1,54 @@
+<h1>Rover - {{ rover.name }}</h1>
+
+<form class="form-inline">
+  <div class="form-group mb-2">
+    Pick an Earth date:
+  </div>
+  <div class="input-group mx-sm-3 mb-2">
+    <label for="earthDate" class="sr-only">Earth Date</label>
+    <input id="earthDate" class="form-control" placeholder="yyyy-mm-dd"
+           name="dp" [(ngModel)]="selectedDate" ngbDatepicker #d="ngbDatepicker"
+           [minDate]="minDate" [maxDate]="maxDate">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary fa-calendar"
+              (click)="d.toggle()" type="button"></button>
+    </div>
+  </div>
+  <button class="btn btn-primary mb-2"
+          [disabled]="!selectedDate"
+          (click)="ShowPictures($event, selectedDate)"
+          type="submit">
+    Show Pictures
+  </button>
+</form>
+
+<hr />
+<!--<pre>selectedDate: {{ selectedDate | json }}</pre>-->
+<div [hidden]="!photos">
+  Total number of photos: {{photos?.length}} <br />
+</div>
+
+<div class="row">
+  <div class="col-3 roverCard"
+       *ngFor="let photo of photos">
+    <div class="card">
+      <a href="{{photo.img_src}}" target="_blank" title="Click to view full sized picture">
+        <img class="card-img-top" src="{{GetHttpsSrc(photo.img_src)}}" alt="Card image cap" style="max-width: 150px; max-height:150px;">
+      </a>
+      <div class="card-body">
+        <h5 class="card-title" style="text-align: center;">ID - {{photo.id}}</h5>
+        <p class="card-text">
+          Earth date: {{photo.earth_date}} <br />
+          Sol: {{photo.sol}} <br />
+          Camera: {{photo.camera.name}} - {{photo.camera.full_name}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)"
+             size="large"
+             color="#fff"
+             type="ball-atom"></ngx-spinner>

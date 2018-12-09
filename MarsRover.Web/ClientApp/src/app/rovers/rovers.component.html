@@ -1,0 +1,27 @@
+<h1>Rovers</h1>
+
+<div class="row">
+  <div class="col-3 roverCard"
+       *ngFor="let rover of rovers$">
+    <div class="card">
+      <a class="text-center"
+         routerLink="/details/{{rover.id}}">
+        <h2 class="text-center">{{ rover.name }}</h2>
+      </a>
+      <div class="card-body">
+        <!--<h5 class="card-title">Card title</h5>-->
+        <p class="card-text">
+          Landing Date: {{rover.landing_date | date:"MM/dd/yy"}}<br />
+          Launch Date: {{rover.launch_date | date:"MM/dd/yy"}}<br />
+          Status: {{rover.status}}<br />
+          Max Sol: {{rover.max_sol}}<br />
+          Max Date: {{rover.max_date | date:"MM/dd/yy"}}<br />
+          Total Photos: <a routerLink="/pictures/rover/{{rover.id}}">{{rover.total_photos}}</a><br />
+          Cameras: {{getCameraList(rover.cameras)}}<br />
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+

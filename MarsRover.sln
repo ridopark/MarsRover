@@ -9,21 +9,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRover.Host", "MarsRover
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{43DE77F6-E849-4AE0-96F9-B9AE4653DA76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRover.Core", "MarsRover.Core\MarsRover.Core.csproj", "{178BB976-64CD-40F8-898B-C3EB3454CD0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRover.Core", "MarsRover.Core\MarsRover.Core.csproj", "{178BB976-64CD-40F8-898B-C3EB3454CD0E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{0D145476-180F-4D41-94B6-5F76708C790A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRover.Service", "MarsRover.Service\MarsRover.Service.csproj", "{D505DB25-94ED-4F4A-993A-71541A382928}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRover.Service", "MarsRover.Service\MarsRover.Service.csproj", "{D505DB25-94ED-4F4A-993A-71541A382928}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{96AB788B-D932-4400-9AE4-4EC9789D749A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRover.Data", "MarsRover.Data\MarsRover.Data.csproj", "{77DF3EFE-AF55-4B74-8093-EA4E9C8911E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRover.Data", "MarsRover.Data\MarsRover.Data.csproj", "{77DF3EFE-AF55-4B74-8093-EA4E9C8911E5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{B3EBBDFA-96C9-4CC5-BDA8-A5EF3197B5A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRover.UnitTest", "MarsRover.UnitTest\MarsRover.UnitTest.csproj", "{33D2976B-1DE9-4951-AFC7-5BF348D0891B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRover.UnitTest", "MarsRover.UnitTest\MarsRover.UnitTest.csproj", "{33D2976B-1DE9-4951-AFC7-5BF348D0891B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRover.IntegrationTest", "MarsRover.IntegrationTest\MarsRover.IntegrationTest.csproj", "{93FADF9F-A293-4BFE-8167-15033C8C6835}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRover.IntegrationTest", "MarsRover.IntegrationTest\MarsRover.IntegrationTest.csproj", "{93FADF9F-A293-4BFE-8167-15033C8C6835}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRover.Web", "MarsRover.Web\MarsRover.Web.csproj", "{E307B409-1D2A-40B2-AE1B-47C51E2A6421}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRover.WebApi", "MarsRover.WebApi\MarsRover.WebApi.csproj", "{DCAABFBC-483B-4B62-940C-BDDCFA680FF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +59,14 @@ Global
 		{93FADF9F-A293-4BFE-8167-15033C8C6835}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93FADF9F-A293-4BFE-8167-15033C8C6835}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93FADF9F-A293-4BFE-8167-15033C8C6835}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E307B409-1D2A-40B2-AE1B-47C51E2A6421}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E307B409-1D2A-40B2-AE1B-47C51E2A6421}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E307B409-1D2A-40B2-AE1B-47C51E2A6421}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E307B409-1D2A-40B2-AE1B-47C51E2A6421}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCAABFBC-483B-4B62-940C-BDDCFA680FF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCAABFBC-483B-4B62-940C-BDDCFA680FF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCAABFBC-483B-4B62-940C-BDDCFA680FF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCAABFBC-483B-4B62-940C-BDDCFA680FF1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +78,8 @@ Global
 		{77DF3EFE-AF55-4B74-8093-EA4E9C8911E5} = {96AB788B-D932-4400-9AE4-4EC9789D749A}
 		{33D2976B-1DE9-4951-AFC7-5BF348D0891B} = {B3EBBDFA-96C9-4CC5-BDA8-A5EF3197B5A3}
 		{93FADF9F-A293-4BFE-8167-15033C8C6835} = {B3EBBDFA-96C9-4CC5-BDA8-A5EF3197B5A3}
+		{E307B409-1D2A-40B2-AE1B-47C51E2A6421} = {1AD00FD5-D0C0-42FD-93C4-3E8562B4B54B}
+		{DCAABFBC-483B-4B62-940C-BDDCFA680FF1} = {1AD00FD5-D0C0-42FD-93C4-3E8562B4B54B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3AF41E5C-1063-4CEE-9960-3F6D7DEC9F40}

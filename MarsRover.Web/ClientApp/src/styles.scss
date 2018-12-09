@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.css';
+@import "~font-awesome/css/font-awesome.css";
+
+.roverCard {
+  margin: 1em 0;
+  .card {
+    padding: 1em;
+    a {
+      align-self: center;
+
+      img {
+        align-self: center;
+      }
+    }
+  }
+}
+
