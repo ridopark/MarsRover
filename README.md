@@ -15,13 +15,11 @@ MarsRover.Host
     - MarsRover:DownloadBasePath
       - path to download pictures
       - "./download/"
-   
-  To build  
+  - To build
     1. ~\MarsRover-master\dotnet restore
     2. ~\MarsRover-master\MarsRover.Host\dotnet build
-  
-  To Run
-    1. ~\MarsRover-master\MarsRover.Host\bin\Debug\netcoreapp2.1\dotnet MarsRover.Host.dll
+  - To Run
+    - ~\MarsRover-master\MarsRover.Host\bin\Debug\netcoreapp2.1\dotnet MarsRover.Host.dll
       - all pictures will download to download\[Date]\[RoverName]\[CameraName]
     
   
