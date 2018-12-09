@@ -2,20 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>3.1.6</TypeScriptToolsVersion>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="ClientApp\src\app\ViewModel\EarthDate.ts" />
-    <None Remove="ClientApp\src\app\ViewModel\Photo.ts" />
-    <None Remove="ClientApp\src\app\ViewModel\Rover.ts" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="ClientApp\src\app\ViewModel\Photo.ts" />
-    <Compile Include="ClientApp\src\app\ViewModel\EarthDate.ts" />
-    <Compile Include="ClientApp\src\app\ViewModel\Rover.ts" />
-  </ItemGroup>
 
   <ItemGroup>
     <Folder Include="wwwroot\" />
