@@ -19,4 +19,10 @@
     <ProjectReference Include="..\MarsRover.Service\MarsRover.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <TransformOnBuild>true</TransformOnBuild>
+    </Content>
+  </ItemGroup>
+
 </Project>

@@ -55,7 +55,7 @@ namespace MarsRover.WebApi
 
             app.UseHttpsRedirection();
             app.UseCors(builder =>
-                builder.WithOrigins("http://localhost:4200", "http://www.myclientserver.com")
+                builder
                     .AllowAnyOrigin()
                     .AllowAnyHeader()
                     .AllowAnyMethod());

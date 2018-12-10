@@ -3,6 +3,7 @@ import { DataService } from '../data.service';
 import { Observable } from 'rxjs';
 import { ActivatedRoute } from "@angular/router";
 import { Camera } from '../ViewModel/Camera';
+import { Rover } from '../ViewModel/Rover';
 
 @Component({
   selector: 'app-details',
@@ -11,15 +12,17 @@ import { Camera } from '../ViewModel/Camera';
 })
 export class DetailsComponent implements OnInit {
 
-  rover$: Object;
+  rover$: Rover;
 
   constructor(private route: ActivatedRoute, private data: DataService) {
-     this.route.params.subscribe( params => this.rover$ = params.id );
+    this.route.params.subscribe(params => this.rover$ = params.id);
   }
 
   ngOnInit() {
     this.data.getRover(this.rover$).subscribe(
-      data => this.rover$ = data 
+      data => {
+        this.rover$ = data as Rover;
+      }
     );
   }
 
