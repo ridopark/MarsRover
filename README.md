@@ -25,7 +25,7 @@ MarsRover.Host
   
 MarsRover.Web 
   - To build and run WebApi service first.
-    1. ~\MarsRover-master> dotnet restore
+    1. ~\MarsRover-master> dotnet restore ./MarsRover.sln
     2. ~\MarsRover-master\MarsRover.WebApi> dotnet build
     3. ~\MarsRover-master\MarsRover.WebApi> dotnet run
   - To build and run Web project.
