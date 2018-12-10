@@ -20,7 +20,7 @@ MarsRover.Host
     2. ~\MarsRover-master\MarsRover.Host> dotnet build
   - To Run
     - ~\MarsRover-master\MarsRover.Host> dotnet run
-      - all pictures will download to .\download\[Date]\[RoverName]\[CameraName]
+      - all pictures will download to .\\download\\[Date]\\[RoverName]\\[CameraName]\\filename.xxx
       - ex) .\download\2016-07-13\Curiosity\FHAZ\FLB_521681963EDR_F0551864FHAZ00323M_.JPG
   
 MarsRover.Web 
