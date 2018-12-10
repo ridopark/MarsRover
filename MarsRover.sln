@@ -27,7 +27,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRover.IntegrationTest",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRover.Web", "MarsRover.Web\MarsRover.Web.csproj", "{E307B409-1D2A-40B2-AE1B-47C51E2A6421}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarsRover.WebApi", "MarsRover.WebApi\MarsRover.WebApi.csproj", "{DCAABFBC-483B-4B62-940C-BDDCFA680FF1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsRover.WebApi", "MarsRover.WebApi\MarsRover.WebApi.csproj", "{DCAABFBC-483B-4B62-940C-BDDCFA680FF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

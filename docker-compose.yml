@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  marsrover.host:
+    image: ${DOCKER_REGISTRY}marsroverhost
+    build:
+      context: .
+      dockerfile: MarsRover.Host/Dockerfile

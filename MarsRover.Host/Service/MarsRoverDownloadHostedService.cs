@@ -82,7 +82,8 @@ namespace MarsRover.Host.Service
         private async Task<List<DateTime>> GetDatesFromFileAsync(string filename)
         {
             _logger.LogInformation($"Get dates from text file: {filename}");
-            var filepath = $"{Directory.GetCurrentDirectory()}\\{filename}";
+            //var filepath = $"{Directory.GetCurrentDirectory()}\\{filename}";
+            var filepath = $"{filename}";
             var result = new List<DateTime>();
             var lines = await File.ReadAllLinesAsync(filepath);
             foreach(var line in lines)
