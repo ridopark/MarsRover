@@ -16,7 +16,7 @@ MarsRover.Host
       - path to download pictures
       - "./download/"
   - To build
-    1. ~\MarsRover-master> dotnet restore
+    1. ~\MarsRover-master> dotnet restore ./MarsRover.sln
     2. ~\MarsRover-master\MarsRover.Host> dotnet build
   - To Run
     - ~\MarsRover-master\MarsRover.Host> dotnet run
