@@ -24,6 +24,7 @@ MarsRover.Host
       - ex) .\download\2016-07-13\Curiosity\FHAZ\FLB_521681963EDR_F0551864FHAZ00323M_.JPG
   
 MarsRover.Web 
+  - https://marsroverweb-rido.azurewebsites.net/
   - To build and run WebApi service first.
     1. ~\MarsRover-master> dotnet restore ./MarsRover.sln
     2. ~\MarsRover-master\MarsRover.WebApi> dotnet build
