@@ -41,6 +41,6 @@ MarsRover.Web
 Docker
   - To build docker image
     1. ~\MarsRover-master> docker build -t marsroverhost .
-    2. ~\MarsRover-master> docker run --rm marsroverhost 
-    or to use the shared drive to save pictures to c:/temp on the host.
-    2. ~\MarsRover-master> docker run --rm -v c:/temp:/app/download marsroverhost
+    2. ~\MarsRover-master> docker run --rm marsroverhost     
+    3. or to use the shared drive to save pictures to c:/temp on the host.
+       ~\MarsRover-master> docker run --rm -v c:/temp:/app/download marsroverhost
