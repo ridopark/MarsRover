@@ -30,6 +30,7 @@ MarsRover.Web
     2. ~\MarsRover-master\MarsRover.WebApi> dotnet build
     3. ~\MarsRover-master\MarsRover.WebApi> dotnet run
   - To build and run Web project.
+    0. npm install -g @angular/cli -> installs angular cli
   	1. ~\MarsRover-master\MarsRover.Web\ClientApp> npm install npm-install-peers
   		- restores all node packages
     2. ~\MarsRover-master\MarsRover.Web> dotnet build    
